@@ -1,0 +1,228 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+html{
+    margin: 0;
+    padding: 0;
+}
+.main-container{
+    display: grid;
+    grid-template-columns: 210px 1fr;
+    grid-template-rows: 1fr 1fr 1fr 60px ;
+    grid-template-areas:
+        "sidebar header"
+        "sidebar card-container"
+        "sidebar numbers"
+        "footer numbers";
+    height: 100vh;
+    width: 100%;
+    background-color: #BBD6E4;
+}
+
+/* Start header section*/
+
+.header{
+    display: flex;
+    flex-direction: column;
+    grid-area: header;
+    background-color: #03445D;
+    color:#BBD6E4;
+    align-items: center;
+    height: 80px;
+    width: 100%;
+    justify-content: center;
+}
+.header h2{
+    text-align: center;
+    margin-top: 10px;
+}
+.header-button{
+    display: flex;
+    background-color: #BBD6E4;
+    color:#55859B;
+    width: 80%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    justify-content: center;
+}
+
+/* End Header section*/
+
+/* Start Sidebar section*/
+
+.sidebar {
+    grid-area: sidebar;
+    display: flex;
+    flex-direction: column;
+    background-color: #55859B;
+    color: #BBD6E4;
+    align-items: center;
+}
+
+.sidebar img{
+    width: 100px;
+    height: 100px;
+    }
+
+.sidebar h3{
+    margin: 10px;
+    font-size: 25px;
+    cursor: pointer;
+}
+.sidebar p{
+    margin: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.sidebar .icon-burger{
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}
+
+/* End Sidebar section*/
+
+/* Start Card-Container section*/
+
+.card-container{
+    grid-area: card-container;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+    height: 400px;
+    background-color: #55859B;
+    flex-wrap: wrap;
+    margin: 20px;
+    border-radius: 5px;
+}
+.cards img{
+    margin-top: 20px;
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+}
+.cardinfo{
+    text-align: center;
+    color: #BBD6E4;
+}
+.cardinfo .p1{
+    font-size: 30px;
+}
+
+.cards button{
+    border: none;
+    padding: 10px;
+    background-color:#03445D;
+    color: #BBD6E4;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    border-width: 10px;
+    margin: 15px;
+}
+
+/* End Card-Container section*/
+
+/* Start Number section*/
+
+.numbers{
+    grid-area: numbers;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height:30px;
+    margin: 1px;
+}
+.numbers .number{
+    background-color: #55859B;
+    color: #BBD6E4;
+    height: 20px;
+    width: 20px;
+    margin: 3px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+/* End Number section*/
+
+/* start footer*/
+.footer{
+    display: flex;
+    grid-area: footer;
+    background-color: #03445D;
+    color:#BBD6E4;
+    align-items: center;
+    height:100px;
+    width: 100%;
+    flex-direction: column;
+}
+
+.footer h3{
+    display: grid;
+    text-align: center;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.footer .icon-footer i{
+    color:#BBD6E4;
+    margin-top: 10px;
+    cursor: pointer;
+    
+}
+/*end footer*/
+
+/*start responsivity sections */
+@media screen and (max-width: 576px){
+    .main-container{
+        display: grid;
+        height: 100vh;
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto auto auto auto;
+        grid-template-areas:
+        "sidebar"
+        "header"
+        "card-container"
+        "numbers"
+        "footer";
+    }
+    .card-container{
+        display: grid;
+        grid-template-columns: auto;
+        justify-content: center;
+        overflow-y: scroll;
+        height: 65vh;
+    }
+    .data {
+        display: none;
+    }
+    .sidebar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .sidebar .icon-burger img{
+        display: flex;
+        width: 30px;
+        height: 30px;
+        justify-content: space-evenly;
+    }
+}
+@media screen and (min-width: 577px){
+    .sidebar .icon-burger{
+        display: none;
+    }
+}

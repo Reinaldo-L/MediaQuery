@@ -1,0 +1,172 @@
+@media (max-width: 600px) {
+    body {
+        background: black
+    }
+}
+
+@media (min-width: 900px) {
+    body {
+        background: green
+    }
+}
+
+@media (min-width: 1000px) {
+    body {
+        background: blue
+    }
+}
+
+@media (max-width: 600px) {
+    .main-container {
+        grid-template-columns: 180px 1fr;
+        grid-template-areas:
+        "aside"
+        "header"
+        "maincards"
+        "footer"
+    }
+    }
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.main-container{
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    grid-template-rows: 1fr 1fr 60px;
+    height: 100vh;
+    grid-template-areas:
+    "aside header"
+    "aside maincards"
+    "footer maincards"
+}
+.header{
+    justify-content: center;
+    display: grid;
+    grid-area: header;
+    background-color: rgba(171, 193, 255, 0.848);
+    color: white;
+    height: 100px;
+    align-items: center;
+    width: 100%;
+    grid-template-areas:
+    "h3 h3"
+    "button button"
+}
+.header h3{
+    text-align: center;
+    margin: auto;
+}
+
+.button {
+    height: 2rem;
+    width: 50rem;
+    padding: 5px;
+    margin: 20px;
+    color: black;
+    border: 5px;
+    border-color: blue;
+    justify-content: left;
+}
+
+/*inicio side bar*/
+.aside{
+    grid-area: aside;
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
+    background-color: rgb(95, 196, 255);
+    
+}
+.categorias{
+    margin-bottom: 1rem;
+}
+.nav-item{
+    color: rgb(59, 59, 59);
+    margin: 5px;
+}
+
+/*fin side bar*/
+/* inicio main card area*/
+.maincards{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    background-color: rgb(217, 217, 217);
+
+    
+}
+@media (min-width: 500x) {
+    .maincards {grid-template-columns: 1fr}
+}
+
+@media (min-width: 700px) {
+    .maincards {grid-template-columns: 1fr 1fr}
+}
+
+@media (min-width: 1000px) {
+    .maincards {grid-template-columns: 1fr 1fr 1fr}
+}
+
+@media (min-width: 1000px) {
+    .maincards {grid-template-columns: 1fr 1fr 1fr 1fr}
+}
+
+.cards{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgb(255, 255, 255);
+    align-items: center;
+    border-radius: 8px;
+    margin: 30px;
+    padding: 0%;
+    width: 300px;
+    height: 370px;
+    flex-wrap: wrap;
+    
+}
+img{
+    width: 200px;
+    height: 200px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+.card-data{
+    justify-content: center;
+    text-align: center;
+}
+.product{
+    font-size: large;
+    background-color: white;
+}
+
+.maincards button{
+    width: 100px;
+    background-color: rgba(46, 57, 125, 0.685);
+    color: white;
+    padding: 5px;
+    font-size: 16px;
+}
+
+.numbers {
+    align-items: center;
+    margin: 30px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    background-color: brown;
+    color: white;
+    border: 5px;
+}
+
+/* fin main card area*/
+/*inicio footer*/
+.footer{
+    background-color: rgb(234, 234, 241);
+    grid-area: footer;
+    margin-top: 0%;
+    text-align: center;
+}
+/*fin footer*/
